@@ -8,33 +8,67 @@
 </head>
 <body>
     <h1>This is not confused anymore</h1>
+    <p onclick="this.innerText='clicked'">this is a paragraph</p>
 
     <script>
-        const myObj = {
-            name: 'Kuddus Ali',
-            getFullName: function(){
-                console.log(this);
-                return  this.name;
-            }
-        }
+        // const myObj = {
+        //     name: 'Kuddus Ali',
+        //     getFullName: function(){
+        //         console.log(this);
+        //         return  this.name;
+        //     }
+        // }
 
+        // // myObj.getFullName();
+
+        // const anotherObj = {
+        //     name: 'Biddut Ali'
+        // }
+
+        // anotherObj.getFullName = myObj.getFullName;
+        // console.log(anotherObj.getFullName);
+        // anotherObj.getFullName();
         // myObj.getFullName();
 
-        const anotherObj = {
-            name: 'Biddut Ali'
-        }
 
-        anotherObj.getFullName = myObj.getFullName;
-        console.log(anotherObj.getFullName);
-        anotherObj.getFullName();
-        myObj.getFullName();
+        // function add(a, b){
+        //     console.log(this);
+        //     return a+b;
+        // }
+        // add(12,14);
 
+        // again practice
+        // const myObj = {
+        //     name: 'Samanta',
+        //     job: 'programmer',
+        //     getFullName:function(){
+        //         console.log(this);
+        //         return 'Mr. ' + this.name;
+        //     }
+        // }
+        //     // myObj.getFullName();
+            const anotherObj = {
+                name : 'Riyanka'
+            }
+        //     anotherObj.getFullName = myObj.getFullName;
+        //     console.log(anotherObj.getFullName);
+        //     anotherObj.getFullName();
+
+        //     myObj.getFullName();
+        //     anotherObj.getFullName();
 
         function add(a, b){
             console.log(this);
-            return a+b;
+            return a + b
         }
-        add(12,14);
+        add(12, 8);
+        anotherObj.sum = add;
+        anotherObj.sum();
+        setTimeout(function(){
+            console.log(this)
+        }, 1000);
+
+
     </script>
 </body>
 </html>
